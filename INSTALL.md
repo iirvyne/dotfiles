@@ -48,6 +48,7 @@ Turn swap on for swap partition
 Install base Linux
     `pacstrap /mnt base linux linux-firmware sof-firmware base-devel networkmanager nano grub efibootmgr`
 
+<<<<<<< HEAD
 |------------------------------------------------------------------------------------------|
 
                                  this is where sam is up to
@@ -55,6 +56,8 @@ Install base Linux
 
 |------------------------------------------------------------------------------------------|
 
+=======
+>>>>>>> 1853505384aa35df87dcc723476aefcedff020bd
 ## Configuration and localization
 Generate and move file system tab to correct locations
     `genfstab -U /mnt > /mnt/etc/fstab`
@@ -177,8 +180,13 @@ Uncomment the following lines by removing the # -character at the start them;
     `Include = /etc/pacman.d/mirrorlist`
 Save the file with ctrl+o ctrl+x
 
+<<<<<<< HEAD
 Installing the driver packages (Reference)[<https://github.com/korvahannu/arch-nvidia-drivers-installation-guide>]
 Find your nvidia drivers code name from (Here)[<https://nouveau.freedesktop.org/CodeNames.html>]
+=======
+Installing the driver packages [Reference](<https://github.com/korvahannu/arch-nvidia-drivers-installation-guide>)
+Find your nvidia drivers code name from [here](<https://nouveau.freedesktop.org/CodeNames.html>)
+>>>>>>> 1853505384aa35df87dcc723476aefcedff020bd
 - For the 1650 its "NV16x"
 - Drivers for the 1650 are "nvidia-open nvidia-utils lib32-nvidia-utils"
 Install the correct Base driver, OpenGL, and OpenGL (multilib) packages 
@@ -243,7 +251,11 @@ reboot
     `sudo reboot now `
 
 ## Insatlling hyprland config
+<<<<<<< HEAD
 steal (prasanthrangan's config)[<https://github.com/prasanthrangan/hyprdots>]
+=======
+steal [prasanthrangan's config](<https://github.com/prasanthrangan/hyprdots>)
+>>>>>>> 1853505384aa35df87dcc723476aefcedff020bd
     `pacman -S --needed git base-devel`
     `git clone --depth 1 https://github.com/prasanthrangan/hyprdots ~/HyDE`
     `cd ~/HyDE/Scripts`
