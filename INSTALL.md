@@ -247,12 +247,12 @@ Follow the steps
 ## Copying old hyprland config
 After mounting the 4tb hard drive;
 copy the config files
-    `sudo cp -rf /mnt/4tb/Media/dotfiles/.config/ /home/irvyne/`
-    `sudo cp -rf /mnt/4tb/Media/dotfiles/.git/ /home/irvyne/`
-    `sudo cp -rf /mnt/4tb/Media/dotfiles/.local/ /home/irvyne/`
-    `sudo cp -rf /mnt/4tb/Media/dotfiles/.gitignore /home/irvyne/`
-    `sudo cp -rf /mnt/4tb/Media/dotfiles/.zshrc /home/irvyne/`
-reboot system
+    `sudo cp -rf /mnt/4tb/Media/dotfiles/.config/ /home/irvyne/` <br>
+    `sudo cp -rf /mnt/4tb/Media/dotfiles/.git/ /home/irvyne/` <br>
+    `sudo cp -rf /mnt/4tb/Media/dotfiles/.local/ /home/irvyne/` <br> 
+    `sudo cp -rf /mnt/4tb/Media/dotfiles/.gitignore /home/irvyne/` <br>
+    `sudo cp -rf /mnt/4tb/Media/dotfiles/.zshrc /home/irvyne/` <br>
+reboot system <br>
     `sudo reboot now`
 
 :3
