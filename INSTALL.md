@@ -48,16 +48,6 @@ Turn swap on for swap partition
 Install base Linux
     `pacstrap /mnt base linux linux-firmware sof-firmware base-devel networkmanager nano grub efibootmgr`
 
-<<<<<<< HEAD
-|------------------------------------------------------------------------------------------|
-
-                                 this is where sam is up to
-                                (as of 9:52pm 17th feb 2025)
-
-|------------------------------------------------------------------------------------------|
-
-=======
->>>>>>> 1853505384aa35df87dcc723476aefcedff020bd
 ## Configuration and localization
 Generate and move file system tab to correct locations
     `genfstab -U /mnt > /mnt/etc/fstab`
@@ -272,4 +262,6 @@ copy the config files
     `sudo cp -rf /mnt/4tb/Media/dotfiles/.zshrc /home/irvyne/`
 reboot system
     `sudo reboot now`
+
+:3
 
