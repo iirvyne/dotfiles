@@ -5,7 +5,7 @@ ZSH=/usr/share/oh-my-zsh/
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # List of plugins used
-plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
+plugins=(git sudo zsh-256color zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # In case a command is not found, try to find the package that has it
@@ -86,13 +86,37 @@ alias mkdir='mkdir -p'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
+alias cd_obs='cd "/mnt/4tb/Media/obsidian/Obsidian/"'
+alias cd_manga='cd "/mnt/4tb/Media/_Manga/"'
+alias cd_yt='cd "/mnt/4tb/Media/_Youtube"'
+
+alias dl_play720='
+cd "/mnt/4tb/Media/_Youtube"
+yt-dlp -f "bv[height<=720]+ba/b[height<=720]" "https://www.youtube.com/playlist?list=PLb8rPL-LNKuKRjvQH85MtGP8fhtsxB6Up"
+'
+alias dl_play1080='
+cd "/mnt/4tb/Media/_Youtube"
+yt-dlp -f "bv[height<=1080]+ba/b[height<=1080]" "https://www.youtube.com/playlist?list=PLb8rPL-LNKuKRjvQH85MtGP8fhtsxB6Up"
+'
+
+
+alias start_nsfw='
+figlet -c Irvyne
+neofetch --ascii "/mnt/4tb/Media/OTHER/Windows Files/Documents/Other/ascii.txt"
+if (( RANDOM % 2 )); then
+    pokemon-colorscripts --no-title -n sylveon
+else
+    pokemon-colorscripts --no-title -n vaporeon
+fi'
 
 alias start='
 figlet -c Irvyne
 neofetch
-pokemon-colorscripts --no-title -n sylveon
-'
-
+if (( RANDOM % 2 )); then
+    pokemon-colorscripts --no-title -n sylveon
+else
+    pokemon-colorscripts --no-title -n vaporeon
+fi'
 
 # Display Pokemon
 # pokemon-colorscripts --no-title -r
@@ -104,4 +128,16 @@ start
 
 
 
-alias pokemon= 'pokemon-colorscripts --no-title -r'
+alias pokemon='pokemon-colorscripts --no-title -r'
+alias startplasma='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
+# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /home/irvyne/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH=$PATH:/home/irvyne/.spicetify
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/irvyne/.dart-cli-completion/zsh-config.zsh ]] && . /home/irvyne/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+#. torsocks on

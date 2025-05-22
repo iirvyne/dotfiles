@@ -2,24 +2,25 @@
     font: "Figtree 13";
     g-spacing: 10px;
     g-margin: 0;
-    b-color: #000000FF;
-    fg-color: #FFFFFFFF;
-    fgp-color: #888888FF;
+    b-color: #64B372;
+    fg-color: #AFAAB2;
+    fgp-color: #996575;
     b-radius: 8px;
     g-padding: 8px;
-    hl-color: #FFFFFFFF;
-    hlt-color: #000000FF;
-    alt-color: #111111FF;
-    wbg-color: #000000CC;
+    hl-color: #AE707F;
+    hlt-color: #AFAAB2;
+    alt-color: #524a68;
+    wbg-color: #3a354b;
     w-border: 2px solid;
-    w-border-color: #FFFFFFFF;
+    w-border-color: #AE7B8B;
     w-padding: 12px;
 }
+
 
 configuration {
     modi: "drun";
     show-icons: true;
-    display-drun: "";
+    display-drun: ">⩊<";
 }
 
 listview {
