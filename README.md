@@ -1,19 +1,19 @@
 # Dotfiles
 ---
 
-`hyprland` for tiling window manager
-`sddm` for login manager
-`waybar` for taskbar
-`rofi` for application launcher
-`dunst` for notification daemon
-`wl-clipboard` for clipboard
-`kitty` for terminal
-`thunar` for file explorer
-`kvaumtum` for qt theme
-`bibata-modern-ice` for cursor
-`cantarell` for font
-`tela-circle-dracula` for icon theme
-`neofetch` for system information
+`hyprland` for tiling window manager<br>
+`sddm` for login manager<br>
+`waybar` for taskbar<br>
+`rofi` for application launcher<br>
+`dunst` for notification daemon<br>
+`wl-clipboard` for clipboard<br>
+`kitty` for terminal<br>
+`thunar` for file explorer<br>
+`kvaumtum` for qt theme<br>
+`bibata-modern-ice` for cursor<br>
+`cantarell` for font<br>
+`tela-circle-dracula` for icon theme<br>
+`neofetch` for system information<br>
 
 ```
 sudo pacman -S hyprland sddm waybar rofi dunst wl-clipboard kitty thunar kvantum neofetch
