@@ -1,2 +1,0 @@
-grub-install --garget=x86_64-efi --efi-directory=/mnt/boot/efi --bootloader-id=GRUB
-/mnt/boot/efi might just be /boot/efi i forgor

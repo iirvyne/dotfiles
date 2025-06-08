@@ -85,30 +85,6 @@ alias mkdir='mkdir -p'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-alias cd_obs='cd "/mnt/4tb/Media/obsidian/Obsidian/"'
-alias cd_manga='cd "/mnt/4tb/Media/_Manga/"'
-alias cd_yt='cd "/mnt/4tb/Media/_Youtube"'
-
-alias dl_play720='
-cd "/mnt/4tb/Media/_Youtube"
-yt-dlp -f "bv[height<=720]+ba/b[height<=720]" "https://www.youtube.com/playlist?list=PLb8rPL-LNKuKRjvQH85MtGP8fhtsxB6Up"
-'
-alias dl_play1080='
-cd "/mnt/4tb/Media/_Youtube"
-yt-dlp -f "bv[height<=1080]+ba/b[height<=1080]" "https://www.youtube.com/playlist?list=PLb8rPL-LNKuKRjvQH85MtGP8fhtsxB6Up"
-'
-
-
-alias start_nsfw='
-figlet -c Irvyne
-neofetch --ascii "/mnt/4tb/Media/OTHER/Windows Files/Documents/Other/ascii.txt"
-if (( RANDOM % 2 )); then
-    pokemon-colorscripts --no-title -n sylveon
-else
-    pokemon-colorscripts --no-title -n vaporeon
-fi'
-
 alias start='
 figlet -c Irvyne
 neofetch
@@ -118,20 +94,10 @@ else
     pokemon-colorscripts --no-title -n vaporeon
 fi'
 
-# Display Pokemon
-# pokemon-colorscripts --no-title -r
-
-
-
 start
-
-
-
 
 alias pokemon='pokemon-colorscripts --no-title -r'
 alias startplasma='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
-# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /home/irvyne/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:/home/irvyne/.spicetify
 
@@ -139,5 +105,3 @@ export PATH=$PATH:/home/irvyne/.spicetify
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/irvyne/.dart-cli-completion/zsh-config.zsh ]] && . /home/irvyne/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
-
-#. torsocks on
