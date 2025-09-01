@@ -16,7 +16,7 @@
 `neofetch` for system information<br>
 
 ```
-sudo pacman -S hyprland sddm waybar rofi dunst wl-clipboard kitty thunar kvantum neofetch
+sudo pacman -Syu && sudo pacman -S hyprland sddm waybar rofi dunst wl-clipboard kitty thunar kvantum neofetch
 ```
 ---
 Irvyne's Arch Linux Hyprland dotfiles :3c
