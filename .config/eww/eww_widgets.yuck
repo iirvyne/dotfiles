@@ -1,0 +1,47 @@
+(include "eww_vars.yuck")
+
+(defwidget daybox []
+  (box :height "100" :width "100" :halign "center" :valign "center" :class "container"
+    (label :class "label"  :text DAY)
+  )
+)
+
+(defwidget monthbox []
+  (box :height "100" :width "100" :halign "center" :valign "center" :class "container"
+    (label :class "label"  :text MONTH)
+  )
+)
+
+(defwidget yearbox []
+  (box :height "100" :width "100" :halign "center" :valign "center" :class "container"
+    (label :class "label"  :text YEAR)
+  )
+)
+
+(defwidget userinfobox []
+  (centerbox :height "100" :width "300" :halign "center" :valign "center" :class "userinfo-parent"
+    (box :height "100" :width "112" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "kitty --directory ~ & cd ~ & disown" :class "button"
+        (label :class "icon-label"  :text "")
+      )
+    )
+    (box :height "100" :width "112" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "thunar ~ & disown"  :class "button"
+        (label :class "icon-label"  :text "󰉋")
+      )
+    )
+    (box :height "100" :width "112" :halign "center" :valign "center" :class "userinfo-child"
+      (button :onclick "kitty cava & disown" :class "button"
+        (label :class "icon-label"  :text "")
+      )
+    )
+  )
+)
+
+
+(defwidget cava []
+  (box :height "100" :width "340" :halign "bottom" :valign "bottom" :class "container"
+    (label :class "label" :halign "bottom" :valign "end" :text CAVA)
+  )
+)
+

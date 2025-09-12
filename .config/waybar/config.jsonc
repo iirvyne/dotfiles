@@ -15,7 +15,7 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","hyprland/window","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","hyprland/window","custom/r_end","custom/padd", "custom/padd","custom/l_end","custom/cava","custom/r_end","custom/padd"],
 
 
 	"modules-center": ["custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","idle_inhibitor","clock","custom/r_end",],
@@ -75,6 +75,7 @@
     "clock": {
         "format": "{:%I:%M %p}",
         "rotate": 0,
+        "on-click": "exec gnome-calendar",
         "format-alt": "{:%R 󰃭 %d·%m·%y}",
         "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
@@ -306,6 +307,21 @@
         "interval" : 86400, // once every day
         "tooltip": true
     },
+"custom/power_profile": {
+  "format": "{}",
+  "tooltip": true,
+  "exec": "~/.config/waybar/toggle-power.sh",
+  "on-click": "~/.config/waybar/toggle-power.sh",
+  "tooltip-format": "{tooltip}",
+  "on-hover": "bash -c ~/.config/waybar/power-draw.sh"
+},
+
+
+"custom/cava": {
+    "exec": "~/.config/eww/scripts/cava.sh",
+    "format": "{}",
+    "on-click": "kitty cava"
+},
 
 
 // modules for padding //

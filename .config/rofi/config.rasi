@@ -7,10 +7,10 @@
     fgp-color: #996575;
     b-radius: 8px;
     g-padding: 8px;
-    hl-color: #AE707F;
+    hl-color: #AE7B8B;
     hlt-color: #AFAAB2;
-    alt-color: #524a68;
-    wbg-color: #3a354b;
+    alt-color: #7a7099;
+    wbg-color: #130E13;
     w-border: 2px solid;
     w-border-color: #AE7B8B;
     w-padding: 12px;

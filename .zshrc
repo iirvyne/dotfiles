@@ -85,6 +85,27 @@ alias mkdir='mkdir -p'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+alias cd_obs='cd "/mnt/2tb/other/obsidian/obsidian/"'
+#alias cd_obs='cd "/mnt/4tb/Media/obsidian/Obsidian/"'
+alias cd_media='cd /mnt/4tb/media/obsidian/obsidian/irvyne/1.0\ -\ Media'
+alias cd_manga='cd "/mnt/4tb/media/manga/"'
+alias cd_yt='cd "/mnt/4tb/media/youtube"'
+
+alias cd_git='cd /mnt/2tb/other/github'
+
+alias=dl_play='
+yt-dlp -f "bv[height<=720]+ba/b[height<=720]"
+'
+
+alias start_nsfw='
+figlet -c Irvyne
+neofetch --ascii ~/Documents/txt/other/ascii.txt
+if (( RANDOM % 2 )); then
+    pokemon-colorscripts --no-title -n sylveon
+else
+    pokemon-colorscripts --no-title -n vaporeon
+fi'
+
 alias start='
 figlet -c Irvyne
 neofetch
@@ -94,10 +115,17 @@ else
     pokemon-colorscripts --no-title -n vaporeon
 fi'
 
+# Display Pokemon
+# pokemon-colorscripts --no-title -r
+
 start
+
+
 
 alias pokemon='pokemon-colorscripts --no-title -r'
 alias startplasma='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
+# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /home/irvyne/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:/home/irvyne/.spicetify
 
@@ -105,3 +133,12 @@ export PATH=$PATH:/home/irvyne/.spicetify
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/irvyne/.dart-cli-completion/zsh-config.zsh ]] && . /home/irvyne/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
+
+
+# pnpm
+export PNPM_HOME="/home/irvyne/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

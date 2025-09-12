@@ -1,0 +1,80 @@
+(include "eww_widgets.yuck")
+
+(defwindow yearbox
+  :monitor '[1]'
+  :stacking "bg"
+  :namespace "eww"
+  :geometry (geometry
+    :x "20"
+    :y "20"
+    :width "100"
+    :height "100"
+    :anchor "bottom right")
+  (yearbox)
+)
+
+(defwindow monthbox
+  :monitor '[1]'
+  :stacking "bg"
+  :namespace "eww"
+  :geometry (geometry
+    :x "140"
+    :y "20"
+    :width "100"
+    :height "100"
+    :anchor "bottom right")
+  (monthbox)
+)
+
+(defwindow daybox
+  :monitor '[1]'
+  :stacking "bg"
+  :namespace "eww"
+  :geometry (geometry
+    :x "260"
+    :y "20"
+    :width "100"
+    :height "100"
+    :anchor "bottom right")
+  (daybox)
+)
+
+(defwindow userinfo
+  :monitor '[1]'
+  :stacking "bg"
+  :namespace "eww"
+  :geometry (geometry
+    :x "20"
+    :y "140"
+    :width "100"
+    :height "100"
+    :anchor "bottom right")
+  (userinfobox)
+)
+
+(defwindow powermenu
+  :monitor '[1]'
+  :stacking "bg"
+  :namespace "eww"
+  :geometry (geometry
+    :x "20"
+    :y "140"
+    :width "100"
+    :height "100"
+    :anchor "bottom right")
+  (powermenu)
+)
+
+
+(defwindow cava
+  :monitor '[1]'
+  :stacking "bg"
+  :namespace "eww"
+  :geometry (geometry
+    :x "20"
+    :y "260"
+    :width "100"
+    :height "100"
+    :anchor "bottom right")
+  (cava)
+  )
