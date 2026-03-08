@@ -1,4 +1,5 @@
 # Oh-my-zsh installation path
+figlet -c Irvyne
 ZSH=/usr/share/oh-my-zsh/
 
 # Powerlevel10k theme path
@@ -7,6 +8,11 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # List of plugins used
 plugins=(git sudo zsh-256color zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
+
+export PATH=$PATH:/home/irvyne/spicetify
+export XDG_RUNTIME_DIR=/run/user/1000
+
+# |-------------------------------------------------------------------------|
 
 # In case a command is not found, try to find the package that has it
 function command_not_found_handler {
@@ -57,6 +63,8 @@ function in {
     fi
 }
 
+# |-------------------------------------------------------------------------|
+
 # Helpful aliases
 alias c='clear' # clear terminal
 alias l='eza -lh --icons=auto' # long list
@@ -82,32 +90,29 @@ alias .5='cd ../../../../..'
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# |-------------------------------------------------------------------------|
 
-alias cd_obs='cd "/mnt/2tb/other/obsidian/obsidian/"'
-#alias cd_obs='cd "/mnt/4tb/Media/obsidian/Obsidian/"'
-alias cd_media='cd /mnt/4tb/media/obsidian/obsidian/irvyne/1.0\ -\ Media'
-alias cd_manga='cd "/mnt/4tb/media/manga/"'
-alias cd_yt='cd "/mnt/4tb/media/youtube"'
-
+# Change directory shortcuts
+alias cd_obs='cd "/mnt/2tb/other/github/obsidian/obsidian"'
 alias cd_git='cd /mnt/2tb/other/github'
 
-alias=dl_play='
-yt-dlp -f "bv[height<=720]+ba/b[height<=720]"
-'
+# Youtube downloader for <720 at current folder
+alias=dl_play='yt-dlp -f "bv[height<=720]+ba/b[height<=720]"'
 
-alias start_nsfw='
-figlet -c Irvyne
-neofetch --ascii ~/Documents/txt/other/ascii.txt
-if (( RANDOM % 2 )); then
-    pokemon-colorscripts --no-title -n sylveon
-else
-    pokemon-colorscripts --no-title -n vaporeon
-fi'
+# Makes steam use integrated graphics to be able to run
+alias steam='DRI_PRIME=0 steam -no-cef-sandbox -nominidumps'
 
+# Cloudflare tunnels for servers (jellyfin, vaultwarden, matrix.org)
+alias vaultfin='cloudflared tunnel --config ~/.cloudflared/jellyfin.yml run jellyfin & cloudflared tunnel --config ~/.cloudflared/vault.yml run vault & cloudflared tunnel --config ~/.cloudflared/matrix.yml run matrix'
+
+# Starts plasma DE
+alias startplasma='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
+
+# Pokemon script
+alias pokemon='pokemon-colorscripts --no-title -r'
+
+# Start script
 alias start='
-figlet -c Irvyne
 neofetch
 if (( RANDOM % 2 )); then
     pokemon-colorscripts --no-title -n sylveon
@@ -115,28 +120,21 @@ else
     pokemon-colorscripts --no-title -n vaporeon
 fi'
 
-# Display Pokemon
-# pokemon-colorscripts --no-title -r
-
 start
 
-
-
-alias pokemon='pokemon-colorscripts --no-title -r'
-alias startplasma='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
-# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /home/irvyne/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export PATH=$PATH:/home/irvyne/.spicetify
+# |-------------------------------------------------------------------------|
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/irvyne/.dart-cli-completion/zsh-config.zsh ]] && . /home/irvyne/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # pnpm
 export PNPM_HOME="/home/irvyne/.local/share/pnpm"
+
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
