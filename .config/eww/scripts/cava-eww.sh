@@ -7,7 +7,7 @@ dict="s/;//g"
 
 # Build sed replacement rules: s/0/▁/g, s/1/▂/g, ..., s/7/█/g
 for ((i = 0; i < bar_length; i++)); do
-    dict+=";s/$i/${bar:$i:1}/g"
+  dict+=";s/$i/${bar:$i:1}/g"
 done
 
 # Paths
@@ -18,7 +18,7 @@ output_file="/tmp/eww_visualizer.txt"
 mkdir -p "$(dirname "$config_file")"
 cat >"$config_file" <<EOF
 [general]
-bars = 18
+bars = 22
 
 [input]
 method = pulse
@@ -36,5 +36,5 @@ pkill -f "cava -p $config_file"
 
 # Run cava, parse output, and write each frame to file
 cava -p "$config_file" | sed -u "$dict" | while read -r line; do
-    echo "$line" > "$output_file"
+  echo "$line" >"$output_file"
 done
