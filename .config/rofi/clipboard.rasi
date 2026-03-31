@@ -2,6 +2,7 @@
 configuration {
     modi:                        "drun";
     show-icons:                  false;
+    font:                        "Monocraft 9";
 }
 
 @theme "~/.config/rofi/theme.rasi"

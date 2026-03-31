@@ -1,24 +1,4 @@
-*{
-    font: "Monocraft 13";
-    g-spacing: 10px;
-    g-margin: 0;
-
-    b-color: #130E13B3;      /* main-bg */
-    fg-color: #FFCCFFE6;     /* main-fg */
-    fgp-color: #FFCCFFE6;    /* main-fg */
-
-    b-radius: 16px;
-    g-padding: 8px;
-
-    hl-color: #D1AAF080;     /* select-bg */
-    hlt-color: #3F2952E6;    /* select-fg */
-    alt-color: #130E13B3;    /* main-ex */
-    wbg-color: #130E13B3;    /* main-bg */
-    w-border: 2px solid;
-    w-border-color: #AE7B8Bff; /* main-br */
-    w-padding: 12px;
-}
-
+@theme "~/.config/rofi/theme.rasi"
 
 configuration {
     modi: "drun";
