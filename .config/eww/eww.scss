@@ -91,3 +91,29 @@ window {
   font-size: 45px;
   font-weight: normal;
 }
+
+
+.taskbar-container {
+  background-color: #130e13;
+  color: #ffccff;
+  padding: 4px 8px 4px 8px;
+}
+
+.taskbar-button {
+  background-color: rgba(209, 170, 240, 0.5);
+  border-color: #AE7B8B;
+  border-radius: 8px;
+  padding: 4px 8px 4px 8px;
+}
+
+.taskbar-button:hover {
+  text-shadow: 4px 4px 5px;
+  color: #3F2952;
+}
+
+
+.free:hover {
+  text-shadow: 4px 4px 5px;
+  color: #3F2952;
+}
+

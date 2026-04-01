@@ -79,3 +79,15 @@
   (cava)
   )
 
+
+(defwindow taskbar
+  :monitor 1
+  :stacking "bg"
+  :geometry (geometry 
+    :anchor "bottom center"
+    :width "99%"
+    :height "3.425%"
+  )
+  :exclusive true
+  (taskbar)
+)
