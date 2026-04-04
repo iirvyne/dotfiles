@@ -1,4 +1,3 @@
-; sup cuh
 
 (defpoll DAY :interval "1s" '~/.config/eww/scripts/day_format.sh')
 (defpoll MONTH :interval "1s" '~/.config/eww/scripts/month_format.sh')
@@ -6,15 +5,9 @@
 
 (defpoll CAVA :interval "0.03s" 'cat /tmp/eww_visualizer.txt')
 
-(defpoll TIME :interval "1s" "date '+%H:%M %p'")
+(defpoll YURI :interval "7.5s" 'bash ~/.config/eww/scripts/yuri.sh')
 
-(defpoll WINDOW :interval "0.03s" '~/.config/hypr/scripts/eww-window.sh')
-
-(defpoll CPU :interval "1s" 'bash ~/.config/hypr/scripts/eww-cpuinfo.sh')
-(defpoll GPU :interval "1s" 'bash ~/.config/hypr/scripts/eww-gpuinfo.sh')
-(defpoll MEM :interval "1s" 'bash ~/.config/hypr/scripts/eww-meminfo.sh')
-
-(defpoll VOL :interval "0.03s" 'bash ~/.config/hypr/scripts/eww-volinfo.sh')
+(defpoll WINDOW :interval "0.03s" '~/.config/eww/scripts/window.sh')
 
 (defvar workspaces-output "
   (box 
@@ -72,5 +65,11 @@
 
   )
 ")
+(defpoll TIME :interval "1s" "date '+%H:%M %p'")
+(defvar calrev false)
 
+(defpoll CPU :interval "1s" 'bash ~/.config/eww/scripts/cpuinfo.sh')
+(defpoll GPU :interval "1s" 'bash ~/.config/eww/scripts/gpuinfo.sh')
+(defpoll MEM :interval "1s" 'bash ~/.config/eww/scripts/meminfo.sh')
+(defpoll VOL :interval "0.03s" 'bash ~/.config/eww/scripts/volinfo.sh')
 

@@ -93,9 +93,14 @@ window {
 }
 
 
+.taskbar-container > * {
+  padding: 4px 0px 4px 0px;
+}
+
 .taskbar-container {
   background-color: #130e13;
   color: #ffccff;
+  font-size: 16px;
   padding: 4px 8px 4px 8px;
 }
 
@@ -111,9 +116,72 @@ window {
   color: #3F2952;
 }
 
+.bar-menu {
+  font-size: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+.free {
+  color: #A09DA4;
+}
 
 .free:hover {
+  color: #FFFFFF;
   text-shadow: 4px 4px 5px;
-  color: #3F2952;
+}
+
+.visiting {
+  color: #AE707F;
+
+}
+
+.visiting:hover {
+  color: #3a354b;  
+  text-shadow: 4px 4px 5px;
+}
+
+.occupied {
+  color: #ffccff;
+}
+
+.occupied:hover {
+  color: #3F2952;  
+  text-shadow: 4px 4px 5px;
+}
+
+
+.calendar-container {
+  color: #ffccff;
+  background-color: #130e13;  
+  border-style: solid;
+  border-color: #AE7B8B;
+  border-width: 2px;
+  border-radius: 16px;
+  padding: 4px;
+
+}
+
+.calendar-current-inner {
+  color: #AE7B8B;
+  text-shadow: 2px 2px 5px #AE707F;
+}
+.calendar-time-inner {
+
+}
+.calendar-date-inner {
+
+}
+.calendar-year-inner {
+
+}
+
+.calendar-box {
+  
+}
+
+.calendar {
+
 }
 

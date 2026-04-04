@@ -1,38 +1,97 @@
 (include "eww_vars.yuck")
 
 (defwidget daybox []
-  (box :height "100" :width "100" :halign "center" :valign "center" :class "container"
-    (label :class "label"  :text DAY)
+  (box 
+  :height "100" 
+  :width "100" 
+  :halign "center" 
+  :valign "center" 
+  :class "container"
+    (label 
+    :class "label"  
+    :text DAY
+    )
   )
 )
 
 (defwidget monthbox []
-  (box :height "100" :width "100" :halign "center" :valign "center" :class "container"
-    (label :class "label"  :text MONTH)
+  (box 
+  :height "100" 
+  :width "100" 
+  :halign "center" 
+  :valign "center" 
+  :class "container"
+    (label 
+    :class "label"  
+    :text MONTH
+    )
   )
 )
 
 (defwidget yearbox []
-  (box :height "100" :width "100" :halign "center" :valign "center" :class "container"
-    (label :class "label"  :text YEAR)
+  (box 
+  :height "100" 
+  :width "100" 
+  :halign "center" 
+  :valign "center" 
+  :class "container"
+    (label 
+    :class "label"  
+    :text YEAR
+    )
   )
 )
 
 (defwidget userinfobox []
-  (centerbox :height "100" :width "300" :halign "center" :valign "center" :class "userinfo-parent"
-    (box :height "100" :width "112" :halign "center" :valign "center" :class "userinfo-child"
-      (button :onclick "kitty --directory ~ & cd ~ & disown" :class "button"
-        (label :class "icon-label"  :text "")
+  (centerbox 
+  :height "100" 
+  :width "300" 
+  :halign "center" 
+  :valign "center" 
+  :class "userinfo-parent"
+    (box 
+    :height "100" 
+    :width "112" 
+    :halign "center" 
+    :valign "center" 
+    :class "userinfo-child"
+      (button 
+      :onclick "kitty --directory ~ & cd ~ & disown" 
+      :class "button"
+        (label 
+        :class "icon-label"  
+        :text ""
+        )
       )
     )
-    (box :height "100" :width "112" :halign "center" :valign "center" :class "userinfo-child"
-      (button :onclick "thunar ~ & disown"  :class "button"
-        (label :class "icon-label"  :text "󰉋")
+    (box 
+    :height "100" 
+    :width "112" 
+    :halign "center" 
+    :valign "center" 
+    :class "userinfo-child"
+      (button 
+      :onclick "thunar ~ & disown"  
+      :class "button"
+        (label 
+        :class "icon-label"  
+        :text "󰉋"
+        )
       )
     )
-    (box :height "100" :width "112" :halign "center" :valign "center" :class "userinfo-child"
-      (button :onclick "kitty cava & disown" :class "button"
-        (label :class "icon-label"  :text "")
+    (box 
+    :height "100" 
+    :width "112" 
+    :halign "center" 
+    :valign "center" 
+    :class "userinfo-child"
+      (button 
+      :onclick "kitty cava & disown" 
+      :class "button"
+        (label 
+        :class "icon-label"  
+        :text ""
+        )
       )
     )
   )
@@ -40,45 +99,81 @@
 
 
 (defwidget cava []
-  (box :height "100" :width "340" :halign "bottom" :valign "bottom" :class "container"
-    (label :class "label" :halign "bottom" :valign "end" :text CAVA)
+  (box 
+  :height "100" 
+  :width "340" 
+  :halign "bottom" 
+  :valign "bottom" 
+  :class "container"
+    (label 
+    :class "label" 
+    :halign "bottom" 
+    :valign "end" 
+    :text CAVA
+    )
   )
 )
 
 
+(defwidget yuri []
+  (box 
+  :height "200" 
+  :width "340" 
+  :halign "center" 
+  :valign "center" 
+  :class "container"
+    (image
+    :class "label"
+    :preserve-aspect-ratio true
+    :image-height 600
+    :image-width 340
+    :path YURI
+    )
+  )
+)
+
 (defwidget taskbar []
   (box
-  :orientation "horizontal" :class "taskbar-container"
-    (box
-    :halign "start"
-    :class "taskbar-container"
+  :orientation "horizontal"
+  :class "taskbar-container"
+    (box 
+    :hexpand true 
+    :halign "fill"
+      (box 
+      :halign "start"
       (bar-window)
-      (box)
+      )
+    )
+    (box
+    :hexpand true
+    :halign "start"
       (bar-cava)
     )
-
     (box
+    :hexpand true
     :halign "center"
     :class "taskbar-container"
+    :spacing "16"
       (bar-workspaces)
       (bar-clock)
     )
-
     (box
+    :hexpand true
+    :halign "end"
+      (bar-info)
+    )
+    (box
+    :hexpand true
     :halign "end"
     :class "taskbar-container"
-      (bar-info)
       (bar-menu)
     )
   )
 )
 
 
-
 (defwidget bar-window []
   (button
-  :spacing "8"
-  :padding "4px"
   :class "taskbar-button"
     (label
     :text " ${WINDOW}"
@@ -89,8 +184,6 @@
 (defwidget bar-cava []
   (button
   :halign "end"
-  :spacing "8"
-  :padding "4px"
   :class "taskbar-button"
   :onclick "kitty cava &"
     (label
@@ -102,15 +195,16 @@
 (defwidget bar-workspaces []
   (literal
   :content workspaces-output
-  :valign "center"
+  :halign "start"
   :class "taskbar-button"
   )
 )
 
 (defwidget bar-clock []
-  (button
+  (eventbox
+  :onhoverlost "./scripts/calendar.sh"
   :class "taskbar-button"
-    :halign "center"
+  :halign "start"
     (label
     :text "󰥔 ${TIME}"
     :class "taskbar-label"
@@ -118,13 +212,55 @@
   )
 )
 
+(defwidget taskbar-calendar []
+  (box
+  :onhoverlost "./scripts/calendar.sh"
+  :class "calendar-container"
+  :orientation "v"
+  :spacing 16
+  :space-evenly false
+    (box 
+    :class "calendar-current-inner"
+    :orientation "v"
+    :halign "center"
+    :space-evenly false
+      (box 
+      :class "calendar-time-inner"
+        (label 
+        :text "${TIME}"
+        )
+      )
+      (box 
+      :class "calendar-date-inner"
+       (label 
+       :text "${DAY} of ${MONTH}")
+      )      
+      (box 
+      :class "calendar-year-inner"
+       (label 
+       :text "${YEAR}")
+      )
+    )
+    (box 
+    :class "calendar-box"
+    :halign "center"    
+      (calendar
+      :show-details "true"
+      :show-heading "true"
+      :class "calendar"
+      )
+    )
+  )
+)
+
+
+
+
 (defwidget bar-info []
   (box
   :spacing 8
-  :halign "start"
     (button
     :class "taskbar-button"
-    :halign "end"
       (label
       :text "󰍛 ${CPU}"
       :class "taskbar-label"
@@ -132,51 +268,38 @@
     )
     (button
     :class "taskbar-button"
-    :halign "start"
-    :padding "2px"
       (label
       :text "󰾆 ${MEM}"
       )
     )
     (button
     :class "taskbar-button"
-    :padding "2px"
-    :halign "start"
       (label
       :text " ${GPU}"
       )
     )
-
- (eventbox
-    :halign ""
+    (eventbox
     :onscroll "
     if [ '{}' = 'up' ]; then
       $HOME/.config/hypr/scripts/volumecontrol.sh -o i;
     else 
       $HOME/.config/hypr/scripts/volumecontrol.sh -o d;
-    fi
-    "
-    (button
-    :spacing 4
-    :class "taskbar-button"
-    :onclick "pavucontrol -t 3 &"
-      (label
-      :text " ${VOL}"
+    fi"
+      (button
+      :class "taskbar-button"
+      :onclick "pavucontrol -t 3 &"
+        (label
+        :text " ${VOL}"
+        )
       )
     )
   )
-
-
-  )
 )
-
-
 
 (defwidget bar-menu []
   (box
-  :halign "end"
+  :class "taskbar-container bar-menu"
   :spacing 16
-  :padding "8px 16px 8px 16px"
     (button
     :class "taskbar-button"
     :onclick "rofi -show drun & "
@@ -184,7 +307,6 @@
       :text "󰉋"
       )
     )
-
     (button
     :class "taskbar-button"
     :onclick "$HOME/.config/hypr/scripts/cliphist.sh c"
@@ -192,7 +314,6 @@
       :text "󰅇"
       )
     )
-
     (button
     :class "taskbar-button"
     :onclick "$HOME/.config/hypr/scripts/logoutlaunch.sh 2"
@@ -202,5 +323,4 @@
     )
   )
 )
-
 

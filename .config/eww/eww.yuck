@@ -1,93 +1,147 @@
+; gets widgets.yuck
 (include "eww_widgets.yuck")
 
-(defwindow yearbox
-  :monitor '[1]'
-  :stacking "bg"
-  :namespace "eww"
-  :geometry (geometry
-    :x "20"
-    :y "20"
-    :width "100"
-    :height "100"
-    :anchor "bottom right")
-  (yearbox)
-)
-
-(defwindow monthbox
-  :monitor '[1]'
-  :stacking "bg"
-  :namespace "eww"
-  :geometry (geometry
-    :x "140"
-    :y "20"
-    :width "100"
-    :height "100"
-    :anchor "bottom right")
-  (monthbox)
-)
-
+; widgets
 (defwindow daybox
-  :monitor '[1]'
-  :stacking "bg"
-  :namespace "eww"
-  :geometry (geometry
-    :x "260"
-    :y "20"
-    :width "100"
-    :height "100"
-    :anchor "bottom right")
+:monitor '[1]'
+:stacking "bg"
+:namespace "eww"
+:geometry 
+  (geometry
+  :x "260"
+  :y "20"
+  :width "100"
+  :height "100"
+  :anchor "bottom right"
+  )
   (daybox)
 )
 
+(defwindow monthbox
+:monitor '[1]'
+:stacking "bg"
+:namespace "eww"
+:geometry 
+  (geometry
+  :x "140"
+  :y "20"
+  :width "100"
+  :height "100"
+  :anchor "bottom right"
+  )
+  (monthbox)
+)
+
+(defwindow yearbox
+:monitor '[1]'
+:stacking "bg"
+:namespace "eww"
+:geometry 
+  (geometry
+  :x "20"
+  :y "20"
+  :width "100"
+  :height "100"
+  :anchor "bottom right"
+  )
+  (yearbox)
+)
+
 (defwindow userinfo
-  :monitor '[1]'
-  :stacking "bg"
-  :namespace "eww"
-  :geometry (geometry
-    :x "20"
-    :y "140"
-    :width "100"
-    :height "100"
-    :anchor "bottom right")
+:monitor '[1]'
+:stacking "bg"
+:namespace "eww"
+:geometry 
+  (geometry
+  :x "20"
+  :y "140"
+  :width "100"
+  :height "100"
+  :anchor "bottom right"
+  )
   (userinfobox)
 )
 
 (defwindow powermenu
-  :monitor '[1]'
-  :stacking "bg"
-  :namespace "eww"
-  :geometry (geometry
-    :x "20"
-    :y "140"
-    :width "100"
-    :height "100"
-    :anchor "bottom right")
+:monitor '[1]'
+:stacking "bg"
+:namespace "eww"
+:geometry 
+  (geometry
+  :x "20"
+  :y "140"
+  :width "100"
+  :height "100"
+  :anchor "bottom right"
+  )
   (powermenu)
 )
 
-
 (defwindow cava
-  :monitor '[1]'
-  :stacking "bg"
-  :namespace "eww"
-  :geometry (geometry
-    :x "20"
-    :y "260"
-    :width "100"
-    :height "100"
-    :anchor "bottom right")
+:monitor '[1]'
+:stacking "bg"
+:namespace "eww"
+:geometry 
+  (geometry
+  :x "20"
+  :y "260"
+  :width "100"
+  :height "100"
+  :anchor "bottom right"
+  )
   (cava)
+)
+
+(defwindow yuri
+:monitor '[1]'
+:stacking "bg"
+:namespace "eww"
+:geometry 
+  (geometry
+  :x "20"
+  :y "380"
+  :width "100"
+  :height "100"
+  :anchor "bottom right"
   )
+  (yuri)
+)
 
-
+; taskbar
 (defwindow taskbar
-  :monitor 1
-  :stacking "bg"
-  :geometry (geometry 
-    :anchor "bottom center"
-    :width "99%"
-    :height "3.425%"
+:monitor 1
+:stacking "fg"  
+:exclusive true
+:geometry 
+  (geometry 
+  :anchor "bottom center"
+  :width "100%"
+  :height "3.3%"
   )
-  :exclusive true
   (taskbar)
+)
+
+
+(defwindow taskbar-calendar
+:monitor 1
+:stacking "overlay"
+:geometry
+  (geometry
+  :anchor "bottom center"
+  :wdith "150"
+  :height "200"
+  )
+  (taskbar-calendar)
+)
+
+(defwindow calendar
+:monitor 1
+:stacking "overlay"
+:geometry
+  (geometry
+  :anchor "bottom center"
+  :wdith "150"
+  :height "200"
+  )
+  (taskbar-calendar)
 )
