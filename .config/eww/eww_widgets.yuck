@@ -106,7 +106,7 @@
   :valign "bottom" 
   :class "container"
     (label 
-    :class "label" 
+    :class "label cava" 
     :halign "bottom" 
     :valign "end" 
     :text CAVA
@@ -184,7 +184,7 @@
 (defwidget bar-cava []
   (button
   :halign "end"
-  :class "taskbar-button"
+  :class "taskbar-button cava"
   :onclick "kitty cava &"
     (label
     :text CAVA
@@ -206,7 +206,7 @@
   :class "taskbar-button"
   :halign "start"
     (label
-    :text "󰥔 ${TIME}"
+    :text " ⠀󰥔 ${TIME} "
     :class "taskbar-label"
     )
   )
@@ -304,14 +304,14 @@
     :class "taskbar-button"
     :onclick "rofi -show drun & "
       (label
-      :text "󰉋"
+      :text " 󰉋"
       )
     )
     (button
     :class "taskbar-button"
     :onclick "$HOME/.config/hypr/scripts/cliphist.sh c"
       (label
-      :text "󰅇"
+      :text "⠀󰅇 "
       )
     )
     (button
