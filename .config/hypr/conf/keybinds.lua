@@ -246,3 +246,6 @@ hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("pkill -x rofi || " .. scrPat
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(scrPath .. "/keyboardswitch.sh"))
 -- Launch keyboard hints
 hl.bind(mainMod .. " + Slash", hl.dsp.exec_cmd("pkill -x rofi ||" .. scrPath .. "/keybinds_hint.sh c"))
+
+-- Switch theme
+hl.bind(mainMod .. " + grave", hl.dsp.exec_cmd(scrPath .. "/theme-switch.sh"))

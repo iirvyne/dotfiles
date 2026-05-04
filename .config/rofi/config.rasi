@@ -1,24 +1,14 @@
-*{
+@theme "~/.config/rofi/theme.rasi"
+
+* {
     font: "Monocraft 13";
+
     g-spacing: 10px;
     g-margin: 0;
-
-    b-color: #130E13B3;      /* main-bg */
-    fg-color: #FFCCFFE6;     /* main-fg */
-    fgp-color: #FFCCFFE6;    /* main-fg */
-
-    b-radius: 16px;
     g-padding: 8px;
 
-    hl-color: #D1AAF080;     /* select-bg */
-    hlt-color: #3F2952E6;    /* select-fg */
-    alt-color: #130E13B3;    /* main-ex */
-    wbg-color: #130E13B3;    /* main-bg */
-    w-border: 2px solid;
-    w-border-color: #AE7B8Bff; /* main-br */
-    w-padding: 12px;
+    b-radius: 16px;
 }
-
 
 configuration {
     modi: "drun";
@@ -26,80 +16,90 @@ configuration {
     display-drun: ">⩊<";
 }
 
-listview {
-    columns: 1;
-    lines: 7;
-    fixed-height: true;
-    fixed-columns: true;
-    cycle: false;
-    scrollbar: false;
-    border: 0px solid;
-}
-
 window {
     transparency: "real";
     width: 450px;
+
+    background-color: @main-bg;
+
+    border: 2px solid;
+    border-color: @main-br;
+
     border-radius: @b-radius;
-    background-color: @wbg-color;
-    border: @w-border;
-    border-color: @w-border-color;
-    padding: @w-padding;
+
+    padding: 12px;
 }
 
-prompt {
-    text-color: @fg-color;
+mainbox {
+    spacing: @g-spacing;
+    padding: @g-padding;
+
+    children: ["inputbar", "listview", "message"];
+
+    background-color: transparent;
 }
 
 inputbar {
     children: ["prompt", "entry"];
     spacing: @g-spacing;
+
+    background-color: transparent;
+}
+
+prompt {
+    text-color: @main-fg;
+    background-color: transparent;
 }
 
 entry {
     placeholder: "Search Apps";
-    text-color: @fg-color;
-    placeholder-color: @fgp-color;
+    text-color: @main-fg;
+    placeholder-color: @main-fg;
+
+    background-color: transparent;
 }
 
-mainbox {
-    spacing: @g-spacing;
-    margin: @g-margin;
-    padding: @g-padding;
-    children: ["inputbar", "listview", "message"];
+listview {
+    columns: 1;
+    lines: 7;
+
+    fixed-height: true;
+    cycle: false;
+    scrollbar: false;
+
+    background-color: transparent;
 }
 
 element {
     spacing: @g-spacing;
-    margin: @g-margin;
-    padding: @g-padding;
-    border: 0px solid;
+    padding: 8px;
+
+    border: 0px;
     border-radius: @b-radius;
-    border-color: @b-color;
+
     background-color: transparent;
-    text-color: @fg-color;
+    text-color: @main-fg;
 }
 
-element normal.normal {
-	background-color: transparent;
-	text-color: @fg-color;
+/* REMOVE ALL INNER BOX EFFECTS */
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
 }
 
-element alternate.normal {
-	background-color: @alt-color;
-	text-color: @fg-color;
+element-icon {
+    background-color: transparent;
+    size: 1.2em;
 }
 
+element selected.normal,
 element selected.active {
-	background-color: @hl-color;
-	text-color: @hlt-color;
-}
-
-element selected.normal {
-	background-color: @hl-color;
-	text-color: @hlt-color;
+    background-color: @select-bg;
+    text-color: @select-fg;
 }
 
 message {
-    background-color: red;
-    border: 0px solid;
+    background-color: transparent;
+    border: 0px;
 }

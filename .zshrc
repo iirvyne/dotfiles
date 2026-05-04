@@ -10,7 +10,13 @@ plugins=(git sudo zsh-256color zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/home/irvyne/spicetify
-export XDG_RUNTIME_DIR=/run/user/1000
+#export XDG_RUNTIME_DIR=/run/user/1000
+
+GPG_TTYP=`tty`
+export GPG_TTY
+
+export ROCM_PATH=/opt/rocm
+export HSA_OVERRIDE_GFX_VERSION=11.0.0
 
 # |-------------------------------------------------------------------------|
 
@@ -102,14 +108,22 @@ alias=dl_play='yt-dlp -f "bv[height<=720]+ba/b[height<=720]"'
 # Makes steam use integrated graphics to be able to run
 alias steam='DRI_PRIME=0 steam -no-cef-sandbox -nominidumps'
 
-# Cloudflare tunnels for servers (jellyfin, vaultwarden, matrix.org)
-alias vaultfin='cloudflared tunnel --config ~/.cloudflared/jellyfin.yml run jellyfin & cloudflared tunnel --config ~/.cloudflared/vault.yml run vault & cloudflared tunnel --config ~/.cloudflared/matrix.yml run matrix'
+# Cloudflare tunnels for servers (jellyfin, vaultwarden, matrix.org, modoboa)
+alias vaultfin='
+cloudflared tunnel --config ~/.cloudflared/jellyfin.yml run jellyfin & 
+cloudflared tunnel --config ~/.cloudflared/vault.yml run vault & 
+cloudflared tunnel --config ~/.cloudflared/matrix.yml run matrix & 
+cloudflared tunnel --config ~/.cloudflared/modoboa.yml run modoboa &
+cloudflared tunnel --config ~/.cloudflared/sear.yml run sear &'
 
 # Starts plasma DE
 alias startplasma='/usr/lib/plasma-dbus-run-session-if-needed /usr/bin/startplasma-wayland'
 
 # Pokemon script
 alias pokemon='pokemon-colorscripts --no-title -r'
+
+# Lavat config
+alias lavat='lavat -g -G -c "7a7099" -k "AE7B8B" -C'
 
 # Start script
 alias start='

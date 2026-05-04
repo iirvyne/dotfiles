@@ -242,5 +242,5 @@ hl.animation({
 	leaf = "zoomFactor",
 	enabled = true,
 	speed = 7,
-	bezier = "still",
+	bezier = "wind",
 })

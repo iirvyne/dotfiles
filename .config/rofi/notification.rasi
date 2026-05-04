@@ -21,7 +21,7 @@ window {
     padding:                     0em;
     border:                      0em;
     border-radius:               2em;
-    border-color:                #AE7B8B;
+    border-color:                @main-br;
     background-color:            transparent;
     background-image:            url("~/.config/rofi/assets/notification.png", width);
 }

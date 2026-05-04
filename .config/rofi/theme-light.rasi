@@ -1,0 +1,9 @@
+* {
+    font:                        "Monocraft 9";
+    main-bg:            #fdede3;
+    main-fg:            #6b5a5f;
+    main-br:            #e8c9cc;
+    main-ex:            #00ff00;
+    select-bg:          #f5d8c8;
+    select-fg:          #8a747a;
+}

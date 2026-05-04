@@ -1,0 +1,186 @@
+* {
+  all: unset;
+  background: transparent;
+}
+
+.cava {
+  font-family: Monospace;
+}
+
+.container {  
+  font-family: Monocraft;
+  background-color: #eadada;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e8c9cc;
+  color: #8a747a ;
+  border-radius: 16px;
+}
+.userinfo-parent {
+  background-color: #eadada;
+  color: #8a747a ;
+  border-radius: 16px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e8c9cc;
+}
+.userinfo-child {
+  color: #c2a38f ;
+}
+.label {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.button-label {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.completelytrans {
+  background: none;
+}
+
+.button {
+  border-radius: 16px;
+  margin: 10px;
+}
+.button:hover {
+  background-color: #f5d8c8;
+  color: #6b5a5f;
+  transition-duration: 150ms;
+}
+.button:active {
+  background-color: #f5d8c8;
+  color: #6b5a5f;
+  transition-duration: 150ms;
+}
+
+.poweroff-button {
+  border-radius: 16px;
+  margin: 10px;
+}
+.poweroff-button:hover {
+  background-color: #fc4649;
+  color: #141216;
+  transition-duration: 150ms;
+}
+.poweroff-button:active {
+  background-color: #862526;
+  color: #141216;
+  transition-duration: 150ms;
+}
+
+.suspend-button {
+  border-radius: 16px;
+  margin: 10px;
+}
+.suspend-button:hover {
+  background-color: #7b91fc;
+  color: #141216;
+  transition-duration: 150ms;
+}
+.suspend-button:active {
+  background-color: #515ea1;
+  color: #141216;
+  transition-duration: 150ms;
+}
+
+.icon-label {
+  font-size: 45px;
+  font-weight: normal;
+}
+
+
+.taskbar-container > * {
+  padding: 4px 0px 4px 0px;
+}
+
+.taskbar-container {
+  background-color: #fdede3;
+  color: #c2a38f;
+  font-size: 16px;
+  padding: 4px 8px 4px 8px;
+}
+
+.taskbar-button {
+  background-color: rgba(245, 216, 200, 0.5);
+  border-color: #e8c9cc;
+  border-radius: 16px;
+  padding: 4px 8px 4px 8px;
+}
+
+.taskbar-button:hover {
+  text-shadow: 4px 4px 5px;
+  color: #6b5a5f;
+}
+
+.bar-menu {
+  font-size: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.free {
+  color: #fff7f8;
+}
+
+.free:hover {
+  color: #FFFFFF;
+  text-shadow: 4px 4px 5px;
+}
+
+.visiting {
+  color: #c2a38f;
+
+}
+
+.visiting:hover {
+  color: #6b5a5f;
+  text-shadow: 4px 4px 5px;
+}
+
+.occupied {
+  color: #e3bcc2;
+}
+
+.occupied:hover {
+  color: #d9aeb5;  
+  text-shadow: 4px 4px 5px;
+}
+
+
+.calendar-container {
+  color: #c2a38f;
+  background-color: #fdede3;
+  border-style: solid;
+  border-color: #e8c9cc;
+  border-width: 2px;
+  border-radius: 16px;
+  padding: 4px;
+
+}
+
+.calendar-current-inner {
+  color: #e3bcc2;
+  text-shadow: 2px 2px 5px #d9aeb5;
+}
+.calendar-time-inner {
+
+}
+.calendar-date-inner {
+
+}
+.calendar-year-inner {
+
+}
+
+.calendar-box {
+  
+}
+
+.calendar {
+
+}
+
