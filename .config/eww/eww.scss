@@ -1,25 +1,25 @@
 * {
   all: unset;
   background: transparent;
-}
-
-.cava {
-  font-family: Monospace;
-}
-
-.container {  
   font-family: Monocraft;
+}
+
+window {
+  background: transparent;
+}
+
+.container {
   background-color: #130E13;
   border-width: 2px;
   border-style: solid;
   border-color: #AE7B8B;
   color: #B4A0C4 ;
-  border-radius: 16px;
+  border-radius: 12px;
 }
 .userinfo-parent {
   background-color: #130E13;
   color: #B4A0C4 ;
-  border-radius: 16px;
+  border-radius: 12px;
 
   border-width: 2px;
   border-style: solid;
@@ -43,7 +43,7 @@
 }
 
 .button {
-  border-radius: 16px;
+  border-radius: 6px;
   margin: 10px;
 }
 .button:hover {
@@ -58,7 +58,7 @@
 }
 
 .poweroff-button {
-  border-radius: 16px;
+  border-radius: 6px;
   margin: 10px;
 }
 .poweroff-button:hover {
@@ -73,7 +73,7 @@
 }
 
 .suspend-button {
-  border-radius: 16px;
+  border-radius: 6px;
   margin: 10px;
 }
 .suspend-button:hover {
@@ -107,7 +107,7 @@
 .taskbar-button {
   background-color: rgba(209, 170, 240, 0.5);
   border-color: #AE7B8B;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 4px 8px 4px 8px;
 }
 
@@ -121,6 +121,7 @@
   padding-top: 0px;
   padding-bottom: 0px;
 }
+
 
 .free {
   color: #A09DA4;
